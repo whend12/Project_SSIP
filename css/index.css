@@ -1,0 +1,35 @@
+body {
+    font-family: "Roboto", sans-serif;
+    background-color:  #FDEFF4; 
+}
+
+.navbar
+{
+    background-color: #FDEFF4 !important;
+}
+
+.form-control
+{
+    border-color: #E60965 !important;
+    border-style: solid;
+}
+.navbar-brand {
+    display: inline-block;
+    margin-right: 1rem;
+    line-height: inherit;
+    white-space: nowrap;
+    padding: 11px 20px;
+}
+
+.top-search-bar {
+    padding-top: 5px;
+    padding-right: 24px;
+}
+
+.nav-item {
+    padding: 13px 20px;
+    font-size: 16px;
+    line-height: 2;
+    color: #9F2927;
+
+}
