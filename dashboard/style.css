@@ -240,3 +240,45 @@ h1
     color: #E60965;
     font-weight: bold;
 }
+
+/*==================================Details Section==========================*/
+
+.card-title
+{
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.btn-detail
+{
+    position: absolute;
+    left: 13%;
+    transform: translate(-50%, -50%);
+    height: 53px;
+    width: 10%;
+    color: #ffff;
+    border: none;
+    outline: none;
+    background: #E60965;
+    cursor: all 0.4s;
+    border-radius: 20px;
+}
+
+.btn-detail:hover
+{
+    background: #000;
+    transition: all 0.4s;
+}
+
+.bi-arrow-left-circle
+{
+    position: absolute;
+    left: 20px;
+}
+
+/*==================================All Button==========================*/
+.btn-cart
+{
+    border: none;
+    background-color: #FDEFF4;
+}
