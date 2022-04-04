@@ -282,3 +282,21 @@ h1
     border: none;
     background-color: #FDEFF4;
 }
+
+.cart-all
+{
+    text-align: right;
+}
+
+.btn-primary
+{
+    background: #E60965;
+    border-radius: 20px;
+    border: none;
+    margin-bottom: 20px;
+}
+
+.btn-primary:hover
+{
+    background: #000;
+}
