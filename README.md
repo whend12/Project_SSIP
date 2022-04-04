@@ -12,3 +12,6 @@ test push pertama
 02042022
 - upload folder dashboar
 Tolong bikinin function dong buat manggil header dan footer nya
+
+04042022
+- Ada page details.html tapi blm ada button/form buat add ke keranjang & nambahin jumlah barang yang mau di beli (boleh minta tolong tambahin engga ? Thx)
