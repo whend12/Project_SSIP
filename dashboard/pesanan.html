@@ -61,8 +61,8 @@
       <!--produk section-->
       <section class="product py-5">
         <div class="container py-5">
-          <h1>All Product</h1>
-          <div class="row pt-5">
+          <h1>Check Out</h1>
+          <div class="row pt-3">
             <div class="col-lg-6">
                 <div class="card mb-3">
                     <div class="row g-0">
@@ -152,6 +152,15 @@
                         <label for="alamat-customer" class="form-label">Total</label>
                         <div class="input-group mb-3">       
                             <input class="form-control mb-3" type="text" value="Rp 320.000" id="total" aria-label="Disabled input example" disabled readonly><!--Otomatis keiisi ketika milih kota-->
+                        </div>
+                        <label for="alamat-customer" class="form-label">Payment Method</label>
+                        <div class="input-group mb-3">       
+                            <select class="form-select" id="pengiriman">
+                              <option selected>Choose...</option>
+                              <option value="1">Supermarket</option>
+                              <option value="2">Bank Transfer</option>
+                              <option value="3">E-Wallet</option>
+                            </select>
                         </div>
                         <button type="submit" class="btn btn-primary">Check Out</button><!--rencana nya mau mengarah ke page konfirmasi pembayaran. jadi nanti upload bukti pembayaran-->
                     </form>
