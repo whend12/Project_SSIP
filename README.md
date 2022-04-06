@@ -1,6 +1,4 @@
 # Project_SSIP
-Bismillah S
-
 Frontend : Ka Emil and Siro
 Backend : Dimas And Hau (Wendy Maho)
 
@@ -14,8 +12,6 @@ test push pertama
 Tolong bikinin function dong buat manggil header dan footer nya
 
 04042022
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 - Ada page details.html tapi blm ada button/form buat add ke keranjang & nambahin jumlah barang yang mau di beli (boleh minta tolong tambahin engga ? Thx)
 - pesanan.html >> ini untuk checkout barang >> nanti mengarah ke page konfirmasi pembayaran
@@ -25,14 +21,6 @@ Tolong bikinin function dong buat manggil header dan footer nya
 sudah buat index,main,dan lainnya
 progres sudah sampai buat modul kategori dan barang 
 minta tolong dimas dan wendy membuat module user dan kota tinggal copas dari module yang udah ada
-untuk username dan passwordnya
-- admin@ssip.com
-- super
-=======
-- Ada page details.html tapi blm ada button/form buat add ke keranjang & nambahin jumlah barang yang mau di beli (boleh minta tolong tambahin engga ? Thx)
-- pesanan.html >> ini untuk checkout barang >> nanti mengarah ke page konfirmasi pembayaran
->>>>>>> 9d29c09cb3149023d18a65e8975858add6e0e26b
-=======
-- Ada page details.html tapi blm ada button/form buat add ke keranjang & nambahin jumlah barang yang mau di beli (boleh minta tolong tambahin engga ? Thx)
-- pesanan.html >> ini untuk checkout barang >> nanti mengarah ke page konfirmasi pembayaran
->>>>>>> e62106e5f2d80770ff862a783a9137a90bd69b55
+untuk email dan passwordnya
+email      = admin@ssip.com
+password   =  super
