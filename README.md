@@ -1,22 +1,22 @@
 # Project_SSIP
 Frontend : Ka Emil and Siro
-Backend : Dimas And Hau (Wendy Maho)
+Backend : Dimas And Hau (Wendy Gans)
 
-test push pertama
+====================================================
 
-280322
+28-03-22
 - update style.css dari yg commet /*form*/
 
-02042022
+02-04-2022
 - upload folder dashboar
 Tolong bikinin function dong buat manggil header dan footer nya
 
-04042022
+04-04-2022
 
 - Ada page details.html tapi blm ada button/form buat add ke keranjang & nambahin jumlah barang yang mau di beli (boleh minta tolong tambahin engga ? Thx)
 - pesanan.html >> ini untuk checkout barang >> nanti mengarah ke page konfirmasi pembayaran
 
-06042022
+06-04-2022
 -upload folder Project_SSIP
 
 - sudah buat index,main,dan lainnya
