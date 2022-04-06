@@ -18,9 +18,10 @@ Tolong bikinin function dong buat manggil header dan footer nya
 
 06042022
 -upload folder Project_SSIP
-sudah buat index,main,dan lainnya
-progres sudah sampai buat modul kategori dan barang 
-minta tolong dimas dan wendy membuat module user dan kota tinggal copas dari module yang udah ada
-untuk email dan passwordnya
+
+- sudah buat index,main,dan lainnya
+- progres sudah sampai buat modul kategori dan barang 
+- minta tolong dimas dan wendy membuat module user dan kota tinggal copas dari module yang udah ada
+- untuk email dan passwordnya
 email      = admin@ssip.com
 password   =  super
