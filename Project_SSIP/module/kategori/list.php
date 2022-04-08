@@ -4,7 +4,7 @@
 
 <?php
 
-$queryKategori = mysqli_query($koneksi, "SELECT * from kategori");
+$queryKategori = mysqli_query($koneksi, "SELECT * from kategori order by kategori asc");
 
 if (mysqli_num_rows($queryKategori) == 0) {
     echo "<h5>Saat ini belum ada nama kategori di dalam database</h5>";
@@ -14,6 +14,7 @@ if (mysqli_num_rows($queryKategori) == 0) {
     echo "<tr>
             <th class='kiri'>No</th>
             <th class='tengah'>Kategori</th>
+            <th class='tengah'>Status</th>
             <th class='kanan'>Action</th>
     </tr>";
 
@@ -22,6 +23,7 @@ if (mysqli_num_rows($queryKategori) == 0) {
         echo "<tr>
                 <td class='kiri'>$no</td>
                 <td class='tengah'>$row[kategori]</td>
+                <td class='tengah'>$row[status]</td>
                 <td class='kanan'>
                     <a class='tombol-action' href='" . BASE_URL . "index.php?page=my_profile&module=kategori&action=form&kategori_id=$row[kategori_id]'>Edit</a>
                 </td>

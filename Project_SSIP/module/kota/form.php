@@ -1,24 +1,30 @@
 <?php
-$kategori_id = isset($_GET['kategori_id']) ? $_GET['kategori_id'] : false;
+$kota_id = isset($_GET['kota_id']) ? $_GET['kota_id'] : false;
 
-$kategori = "";
+$kota = "";
+$tarif = "";
 $status = "";
 $button = "Add";
 
-if ($kategori_id) {
-    $queryKategori = mysqli_query($koneksi, "SELECT * from kategori where kategori_id='$kategori_id'");
-    $row = mysqli_fetch_assoc($queryKategori);
+if ($kota_id) {
+    $queryKota = mysqli_query($koneksi, "SELECT * from kota where kota_id='$kota_id'");
+    $row = mysqli_fetch_assoc($queryKota);
 
-    $kategori = $row['kategori'];
-    $status = "";
+    $kota = $row['kota'];
+    $tarif = $row['tarif'];
+    $status = $row['status'];
     $button = "Update";
 }
 ?>
-<form action="<?php echo BASE_URL . "module/kategori/action.php?kategori_id=$kategori_id"; ?>" method="POST">
+<form action="<?php echo BASE_URL . "module/kota/action.php?kota_id=$kota_id"; ?>" method="POST">
 
     <div class="form-login">
-        <label class="form-label">Kategori</label>
-        <input type="text" name="kategori" value="<?php echo $kategori; ?>" class="form-control">
+        <label class="form-label">Kota</label>
+        <input type="text" required name="kota" value="<?php echo $kota; ?>" class="form-control">
+    </div>
+    <div class="form-login">
+        <label class="form-label">Tarif</label>
+        <input type="text" required name="tarif" value="<?php echo $tarif; ?>" class="form-control">
     </div>
     <div class="form-login">
         <label class="form-label">Status</label>

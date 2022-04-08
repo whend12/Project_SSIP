@@ -13,7 +13,7 @@ if ($user_id) {
       <div class="col-md-6">
         <div class="row align-items-center justify-content-center">
           <div class="col-md-7">
-            <h3 class="nama-toko"><strong>NamaToko</strong></h3>
+            <h3 class="nama-toko py-5"><strong>NamaToko</strong></h3>
             <p class="greeting">Welcome to NamaToko please login for more great experience. Or
               <span class="ml-auto"><a href="<?php echo BASE_URL . "index.php?page=register"; ?>" class="register">Register Here</a></span>
               <br>

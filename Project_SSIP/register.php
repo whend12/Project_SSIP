@@ -8,7 +8,7 @@
                 <div class="col-md-6">
                     <div class="row align-items-center justify-content-center">
                         <div class="register-form">
-                            <h3 class="nama-toko"><strong>NamaToko</strong></h3>
+                            <h3 class="nama-toko py-5"><strong>NamaToko</strong></h3>
                             <p class="greeting">Already have an account
                                 <span class="ml-auto"><a href="<?php echo BASE_URL . "index.php?page=login"; ?>" class="register">Login Here</a></span>
                                 <br>
