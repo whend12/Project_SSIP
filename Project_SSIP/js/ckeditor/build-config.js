@@ -1,6 +1,6 @@
 ﻿/**
- * @license Copyright (c) 2003-2016, CKSource - Frederico Knabben. All rights reserved.
- * For licensing, see LICENSE.md or http://ckeditor.com/license
+ * @license Copyright (c) 2003-2022, CKSource Holding sp. z o.o. All rights reserved.
+ * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license/
  */
 
 /**
@@ -10,13 +10,13 @@
  * If you would like to build CKEditor online again
  * (for example to upgrade), visit one the following links:
  *
- * (1) http://ckeditor.com/builder
+ * (1) https://ckeditor.com/cke4/builder
  *     Visit online builder to build CKEditor from scratch.
  *
- * (2) http://ckeditor.com/builder/b763fbf8a6a9f8d2597093c4b0cae1fe
+ * (2) https://ckeditor.com/cke4/builder/2b03e0d9fea56c888b82da0c1f8e1151
  *     Visit online builder to build CKEditor, starting with the same setup as before.
  *
- * (3) http://ckeditor.com/builder/download/b763fbf8a6a9f8d2597093c4b0cae1fe
+ * (3) https://ckeditor.com/cke4/builder/download/2b03e0d9fea56c888b82da0c1f8e1151
  *     Straight download link to the latest version of CKEditor (Optimized) with the same setup as before.
  *
  * NOTE:
@@ -25,28 +25,32 @@
  */
 
 var CKBUILDER_CONFIG = {
-	skin: 'moono',
+	skin: 'moono-lisa',
 	preset: 'basic',
 	ignore: [
-		'.bender',
-		'bender.js',
-		'bender-err.log',
-		'bender-out.log',
-		'dev',
 		'.DS_Store',
+		'.bender',
 		'.editorconfig',
 		'.gitattributes',
 		'.gitignore',
-		'gruntfile.js',
 		'.idea',
 		'.jscsrc',
 		'.jshintignore',
 		'.jshintrc',
-		'less',
 		'.mailmap',
+		'.npm',
+		'.nvmrc',
+		'.travis.yml',
+		'bender-err.log',
+		'bender-out.log',
+		'bender.ci.js',
+		'bender.js',
+		'dev',
+		'gruntfile.js',
+		'less',
 		'node_modules',
+		'package-lock.json',
 		'package.json',
-		'README.md',
 		'tests'
 	],
 	plugins : {
@@ -66,6 +70,7 @@ var CKBUILDER_CONFIG = {
 	languages : {
 		'af' : 1,
 		'ar' : 1,
+		'az' : 1,
 		'bg' : 1,
 		'bn' : 1,
 		'bs' : 1,
@@ -82,6 +87,7 @@ var CKBUILDER_CONFIG = {
 		'en-gb' : 1,
 		'eo' : 1,
 		'es' : 1,
+		'es-mx' : 1,
 		'et' : 1,
 		'eu' : 1,
 		'fa' : 1,
@@ -111,6 +117,7 @@ var CKBUILDER_CONFIG = {
 		'nb' : 1,
 		'nl' : 1,
 		'no' : 1,
+		'oc' : 1,
 		'pl' : 1,
 		'pt' : 1,
 		'pt-br' : 1,

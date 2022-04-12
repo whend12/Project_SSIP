@@ -5,7 +5,7 @@ include_once("function/helper.php");
 
 $level = "customer";
 $nama_lengkap = $_POST['nama_lengkap'];
-$email = $_POST['email'];
+$email = is_email_valid($_POST['email']);
 $phone = $_POST['phone'];
 $alamat = $_POST['alamat'];
 $password = $_POST['password'];
@@ -23,5 +23,5 @@ if (empty($nama_lengkap) || empty($email) || empty($alamat) || empty($phone) || 
     $password = md5($password);
     mysqli_query($koneksi, "INSERT INTO user (level, nama, email, alamat, phone, password)
 										VALUES ('$level', '$nama_lengkap', '$email', '$alamat', '$phone', '$password')");
-    header("location: " . BASE_URL . "index.php?page=login");
+    header("location: " . BASE_URL . "login.html");
 }

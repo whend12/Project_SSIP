@@ -3,6 +3,8 @@
 include_once("../../function/koneksi.php");
 include_once("../../function/helper.php");
 
+admin_only("user", $level);
+
 $level = $_POST['level'];
 $nama = $_POST['nama'];
 $email = $_POST['email'];

@@ -15,7 +15,7 @@ if ($user_id) {
           <div class="col-md-7">
             <h3 class="nama-toko py-5"><strong>NamaToko</strong></h3>
             <p class="greeting">Welcome to NamaToko please login for more great experience. Or
-              <span class="ml-auto"><a href="<?php echo BASE_URL . "index.php?page=register"; ?>" class="register">Register Here</a></span>
+              <span class="ml-auto"><a href="<?php echo BASE_URL . "register.html"; ?>" class="register">Register Here</a></span>
               <br>
               <form action="<?php echo BASE_URL . "proses_login.php"; ?>" method="POST">
                 <?php
@@ -27,13 +27,14 @@ if ($user_id) {
                 }
                 ?>
                 <div class="form-login">
-                  <label class="form-label">Email address</label>
-                  <input type="email" name="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="Type your email">
+                  <label class="form-label">Email or Username</label>
+                  <input type="text" name="email" class="form-control" id="InputEmail" aria-describedby="emailHelp">
                   <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                 </div>
                 <div class="form-login">
                   <label class="form-label">Password</label>
-                  <input type="password" name="password" class="form-control" id="InputPassword" placeholder="Type your password">
+                  <i title="Show Password" class="btn-hide-show fa-regular fa-eye-slash"></i>
+                  <input type="password" name="password" class="form-control input-password" id="RegisterPassword">
                 </div>
                 <div class="mb-3 form-check">
                   <input type="checkbox" class="form-check-input" id="remember">
@@ -45,7 +46,7 @@ if ($user_id) {
         </div>
       </div>
       <div class="col-md-6">
-        <img src="image/login-edit.png" class="image-login">
+        <img src="image/login-edit.png" height="600px" class="image-login">
       </div>
     </div>
   </div>

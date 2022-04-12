@@ -19,14 +19,13 @@ if ($barang_id) {
     $nama_barang = $row['nama_barang'];
     $kategori_id = $row['kategori_id'];
     $spesifikasi = $row['spesifikasi'];
-    $gambar = $row['gambar'];
     $harga = $row['harga'];
     $stok = $row['stok'];
     $status = $row['status'];
     $button = "Update";
 
     $keterangan_gambar = "(Klik pilih gambar jika ingin mengganti gambar disamping)";
-    $gambar = "<img src='" . BASE_URL . "image/barang/$gambar' style='width: 200px;vertical-align: middle;' />";
+    $gambar = "<img src='" . BASE_URL . "image/barang/$row[gambar]' style='width: 200px;vertical-align: middle;' />";
 }
 
 ?>
@@ -101,5 +100,14 @@ if ($barang_id) {
 </form>
 
 <script>
-    CKEDITOR.replace("editor");
+    // CKEDITOR.replace("editor");
+
+    var roxyFileman = 'js/ckeditor/fileman/index.html';
+    $(function() {
+        CKEDITOR.replace('editor', {
+            filebrowserBrowseUrl: roxyFileman,
+            filebrowserImageBrowseUrl: roxyFileman + '?type=image',
+            removeDialogTabs: 'link:upload;image:upload'
+        });
+    });
 </script>

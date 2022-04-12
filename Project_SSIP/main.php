@@ -2,122 +2,75 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
 
 <body>
-  <!--produk section-->
-  <div class="container py-5">
-    <h1>All Product</h1>
-    <div class="row pt-5">
-      <div class="col-lg-3">
-        <div class="card boorder-0">
-          <div class="card-body py-5">
-            <img src="image/beauti.png" class="img-fluid" alt="" />
-          </div>
-          <div class="card-footer border-0 text-center bg-color">
-            <h5>Girl's bag</h5>
-            <p class="m-0">Rp. 320.000</p>
-            <a href="#" class="m-0 link">Details</a>
-          </div>
+    <section class="main py-5">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-6 py-5">
+                    <p>April Collection</p>
+                    <h1>Discover Your Style in 2022</h1>
+                    <form action="#all-product">
+                        <button class="btn-shop mt-3" type="submit">Shop Now</button>
+                    </form>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="col-lg-3">
-        <div class="card boorder-0">
-          <div class="card-body py-5">
-            <img src="image/shoes.png" class="img-fluid" alt="" />
-          </div>
-          <div class="card-footer border-0 text-center bg-color">
-            <h5>Adidas Shoes</h5>
-            <p class="m-0">Rp. 320.000</p>
-            <a href="#" class="m-0 link">Details</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3">
-        <div class="card boorder-0">
-          <div class="card-body py-5">
-            <img src="image/hats.png" class="img-fluid" alt="" />
-          </div>
-          <div class="card-footer border-0 text-center bg-color">
-            <h5>Bennie Hat</h5>
-            <p class="m-0">Rp. 320.000</p>
-            <a href="#" class="m-0 link">Details</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3">
-        <div class="card boorder-0">
-          <div class="card-body py-5">
-            <img src="image/jacket.png" class="img-fluid" alt="" />
-          </div>
-          <div class="card-footer border-0 text-center bg-color">
-            <h5>Black Jacket</h5>
-            <p class="m-0">Rp. 320.000</p>
-            <a href="#" class="m-0 link">Details</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row pt-5">
-      <div class="col-lg-3">
-        <div class="card boorder-0">
-          <div class="card-body py-5">
-            <img src="image/beauti.png" class="img-fluid" alt="" />
-          </div>
-          <div class="card-footer border-0 text-center bg-color">
-            <h5>Girl's bag</h5>
-            <p class="m-0">Rp. 320.000</p>
-            <a href="#" class="m-0 link">Details</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3">
-        <div class="card boorder-0">
-          <div class="card-body py-5">
-            <img src="image/shoes.png" class="img-fluid" alt="" />
-          </div>
-          <div class="card-footer border-0 text-center bg-color">
-            <h5>Adidas Shoes</h5>
-            <p class="m-0">Rp. 320.000</p>
-            <a href="#" class="m-0 link">Details</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3">
-        <div class="card boorder-0">
-          <div class="card-body py-5">
-            <img src="image/hats.png" class="img-fluid" alt="" />
-          </div>
-          <div class="card-footer border-0 text-center bg-color">
-            <h5>Bennie Hat</h5>
-            <p class="m-0">Rp. 320.000</p>
-            <a href="#" class="m-0 link">Details</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3">
-        <div class="card boorder-0">
-          <div class="card-body py-5">
-            <img src="image/jacket.png" class="img-fluid" alt="" />
-          </div>
-          <div class="card-footer border-0 text-center bg-color">
-            <h5>Black Jacket</h5>
-            <p class="m-0">Rp. 320.000</p>
-            <a href="#" class="m-0 link">Details</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+    </section>
+    <section id="all-product">
+        <div class="container">
+            <div class="py-3 pr-3" id="kiri">
+
+                <?php
+
+                echo kategori($kategori_id);
+
+                ?>
+
+            </div>
+
+            <div class="py-3" id="kanan">
+                <div id="frame-barang">
+                    <ul>
+                        <?php
+                        if ($kategori_id) {
+                            $kategori_id = "AND barang.kategori_id = '$kategori_id'";
+                        }
+                        $query = mysqli_query($koneksi, "SELECT barang.*,kategori.kategori from barang join kategori on barang.kategori_id=kategori.kategori_id where barang.status='on' 
+                            $kategori_id ORDER BY rand() desc limit 9");
 
 
-  <!-- Optional JavaScript; choose one of the two! -->
+                        $no = 1;
+                        while ($row = mysqli_fetch_assoc($query)) {
 
-  <!-- Option 1: Bootstrap Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+                            $kategori = strtolower($row["kategori"]);
+                            $nama_barang = strtolower($row["nama_barang"]);
+                            $nama_barang = str_replace(" ", "-", $nama_barang);
 
-  <!-- Option 2: Separate Popper and Bootstrap JS -->
-  <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    -->
+                            $style = false;
+                            if ($no == 3) {
+                                $style = "style='margin-right:0px'";
+                                $no = 0;
+                            }
+                            echo "<li $style>
+							<p class='price'>" . rupiah($row['harga']) . "</p>
+							<a href='" . BASE_URL . "$row[barang_id]/$kategori/$nama_barang.html'>
+								<img src='" . BASE_URL . "image/barang/$row[gambar]' />
+							</a>
+							<div class='keterangan-gambar'>
+								<p><a href='" . BASE_URL . "$row[barang_id]/$kategori/$nama_barang.html'>$row[nama_barang]</a></p>
+								<span>Stok : $row[stok]</span>
+							</div>
+							<div class='button-add-cart'>
+								<a href='" . BASE_URL . "tambah_keranjang.php?barang_id=$row[barang_id]'>+ add to cart</a>
+							</div>";
+
+                            $no++;
+                        }
+                        ?>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 
-</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

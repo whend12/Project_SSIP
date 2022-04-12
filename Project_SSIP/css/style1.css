@@ -26,8 +26,6 @@ body {
   font-weight: bold;
 }
 
-.nav-item a:hover {
-}
 
 .search {
   height: 45px;
@@ -321,11 +319,11 @@ li.nav-item {
 }
 
 .table-list tr {
-  border-bottom: 1px solid #1e5474;
+  border-bottom: 2px solid black;
 }
 
 .table-list tr.baris-title {
-  background: #e6e6e6;
+  background: #e60965;
 }
 
 .table-list tr th,
@@ -353,6 +351,7 @@ li.nav-item {
 #frame-tambah {
   margin-bottom: 10px;
   text-align: right;
+
 }
 
 .tombol-action {
@@ -365,9 +364,296 @@ li.nav-item {
   margin-right: 3px;
   font-size: 12px;
   font-weight: bold;
+  /* display: block; */
 }
 
 .tombol-action:hover {
   background: #e60965;
   color: black;
 }
+
+#kiri {
+  float: left;
+  width: 245px;
+  height: auto;
+}
+
+#menu-kategori ul {
+  margin: 0px;
+  list-style: none;
+  padding: 0px;
+}
+
+#menu-kategori ul li {
+  margin-bottom: 5px;
+}
+
+#menu-kategori ul li a {
+  color: black;
+  padding: 5px;
+  display: block;
+  background: #fdeff4;
+  text-decoration: none;
+}
+
+#menu-kategori ul li a:hover,
+#menu-kategori ul li a.active {
+  background: #e60965;
+}
+
+#kanan {
+  width: 1045px;
+  margin-left: 15px;
+  height: auto;
+  /* float: left; */
+}
+
+#kanan #frame-barang ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  padding-left: 10px;
+  overflow: hidden;
+}
+
+#kanan #frame-barang ul li {
+  width: 240px;
+  background: white;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  margin-right: 15px;
+  float: left;
+}
+
+#kanan #frame-barang ul li .price {
+  font-size: 15px;
+  font-weight: bold;
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+#kanan #frame-barang ul li a img {
+  display: block;
+  width: 200px;
+}
+
+#kanan #frame-barang ul li .keterangan-gambar {
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  padding: 10px 0px;
+  height: 50px;
+}
+
+#kanan #frame-barang ul li .keterangan-gambar p {
+  text-align: center;
+  margin: 5px 0px;
+}
+
+#kanan #frame-barang ul li .keterangan-gambar p a {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#kanan #frame-barang ul li .keterangan-gambar span {
+  display: block;
+  text-align: center;
+}
+
+#kanan #frame-barang ul li .button-add-cart {
+  text-align: center;
+}
+
+#kanan #frame-barang ul li .button-add-cart a {
+  background: #fdeff4;
+  color: black;
+  text-decoration: none;
+  padding: 5px 10px;
+  display: inline-block;
+  margin-top: 25px;
+  border-radius: 3px;
+}
+
+#kanan #frame-barang ul li .button-add-cart a:hover {
+  background: #e60965;
+}
+
+#detail-barang {
+  background: white;
+  padding: 20px;
+  margin-left: 240px;
+}
+
+#detail-barang h2 {
+  margin-top: 0px;
+}
+
+#detail-barang #frame-gambar {
+  background: #fbfbfb;
+  padding: 20px;
+}
+
+#detail-barang #frame-gambar img {
+  display: block;
+  margin: 0px auto;
+}
+
+#detail-barang #frame-harga {
+  margin: 15px 0px;
+}
+
+#detail-barang #frame-harga span {
+  font-size: 15px;
+  font-weight: bold;
+  color: red;
+}
+
+#detail-barang #frame-harga a {
+  background: #1e5474;
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  display: inline-block;
+  float: right;
+  border-radius: 3px;
+}
+
+#detail-barang #frame-harga a:hover {
+  background: orange;
+}
+
+#detail-barang #keterangan {
+  margin: 20px 0px;
+}
+.total-barang {
+  color: black;
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: bold;
+  vertical-align: top;
+}
+.card-title {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.btn-detail {
+  position: absolute;
+  left: 13%;
+  transform: translate(-50%, -50%);
+  height: 53px;
+  width: 10%;
+  color: #ffff;
+  border: none;
+  outline: none;
+  background: #E60965;
+  cursor: all 0.4s;
+  border-radius: 20px;
+}
+
+.btn-detail:hover {
+  background: #000;
+  transition: all 0.4s;
+}
+
+.bi-arrow-left-circle {
+  position: absolute;
+  left: 20px;
+}
+
+.update-quantity {
+  width: 30px;
+  text-align: center;
+}
+
+.kanan.hapus_item {
+  position: relative
+}
+
+.kanan.hapus_item a {
+  position: absolute;
+  top: 45px;
+  right: 10px;
+  text-decoration: none;
+  border: 2px solid #fdeff4;
+  color: black;
+  background-color: #fdeff4;
+}
+
+.kanan.hapus_item a:hover {
+  background-color: #da1212;
+}
+
+#frame-button-keranjang a {
+  background: #e60965;
+  color: black;
+  text-decoration: none;
+  padding: 7px 20px;
+  display: inline-block;
+  margin-top: 15px;
+}
+
+#lanjut-pemesanan {
+  float: right;
+}
+
+#container #footer {
+  background: #1e5475;
+  padding: 10px;
+}
+
+#frame-data-pengiriman {
+  float: left;
+  width: 500px;
+  background-color: white;
+}
+
+#frame-data-detail {
+  /* float: left; */
+  width: 650px;
+  margin-left: 520px;
+  background-color: white;
+}
+
+#frame-detail-order {
+  border: 1px solid grey;
+}
+
+#frame-form-pengiriman {
+  border: 1px solid grey;
+  padding: 25px;
+}
+
+h3.label-data-pengiriman {
+  border: 1px solid grey;
+  padding: 10px 7px;
+  margin: 0px;
+}
+
+ul.pagination{
+  margin: 10px 0px 0px 0px;
+  list-style: none;
+  padding: 0px;
+}
+
+ul.pagination li{
+  float: left;
+}
+
+ul.pagination li a{
+  margin-right: 10px;
+  border: 1px solid #000;
+  padding: 5px 7px;
+  text-decoration: none;
+  color: black;
+  display: block;
+}
+
+ul.pagination li a:hover{
+  font-weight: bold;
+}
+
+ul.pagination li a.active{
+  color: white;
+  background: #e60965;
+}
+

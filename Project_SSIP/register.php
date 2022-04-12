@@ -10,7 +10,7 @@
                         <div class="register-form">
                             <h3 class="nama-toko py-5"><strong>NamaToko</strong></h3>
                             <p class="greeting">Already have an account
-                                <span class="ml-auto"><a href="<?php echo BASE_URL . "index.php?page=login"; ?>" class="register">Login Here</a></span>
+                                <span class="ml-auto"><a href="<?php echo BASE_URL . "login.html"; ?>" class="register">Login Here</a></span>
                                 <br>
                                 <form action="<?php echo BASE_URL . "proses_register.php"; ?>" method="POST">
                                     <?php
@@ -27,7 +27,7 @@
                                     }
                                     ?>
                                     <div class="form-login">
-                                        <label class="form-label">Nama Lengkap</label>
+                                        <label class="form-label">Username</label>
                                         <input type="text" name="nama_lengkap" value="<?php echo $nama_lengkap; ?>" class="form-control" id="RegisterName">
                                     </div>
                                     <div class="form-login">
@@ -42,9 +42,10 @@
                                         <label class="form-label">Email</label>
                                         <input type="text" name="email" value="<?php echo $email; ?>" class="form-control" id="RegisterEmail" aria-describedby="emailHelp">
                                     </div>
-                                    <label class="form-label">Password</label>
                                     <div class="form-login">
-                                        <input type="password" name="password" class="form-control" id="RegisterPassword">
+                                        <label class="form-label">Password</label>
+                                        <i title="Show Password" class="btn-hide-show fa-regular fa-eye-slash"></i>
+                                        <input type="password" name="password" class="form-control input-password" id="RegisterPassword">
                                     </div>
                                     <button type="submit" class="btn btn-register">Register</button>
                                 </form>
@@ -53,7 +54,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="image-register">
-                        <img src="image/login.jpg">
+                        <img src="image/login.jpg" height="500px">
                     </div>
                 </div>
             </div>

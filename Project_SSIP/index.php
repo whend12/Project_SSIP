@@ -1,12 +1,17 @@
 <?php
-include_once("function/helper.php");
-include_once("function/koneksi.php");
 session_start();
+
+include_once("function/koneksi.php");
+include_once("function/helper.php");
+
 $page = isset($_GET['page']) ? $_GET['page'] : false;
+$kategori_id = isset($_GET['kategori_id']) ? $_GET['kategori_id'] : false;
 
 $user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : false;
 $level = isset($_SESSION['level']) ? $_SESSION['level'] : false;
 $nama = isset($_SESSION['nama']) ? $_SESSION['nama'] : false;
+$keranjang = isset($_SESSION['keranjang']) ? $_SESSION['keranjang'] : array();
+$totalBarang = count($keranjang);
 
 if ($user_id) {
   $module = isset($_GET['module']) ? $_GET['module'] : false;
@@ -24,9 +29,15 @@ if ($user_id) {
 <head>
   <title>Project SSIP</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
-  <link rel="stylesheet" href="css/style1.css" />
+  <link rel="stylesheet" href="<?php echo BASE_URL . "css/style1.css" ?>" />
+  <link rel="stylesheet" href="<?php echo BASE_URL . "css/fontawesome-free-6.1.0-web/css/all.min.css" ?>" />
+  <script src="<?php echo BASE_URL . "js/jquery-3.1.1.min.js"; ?>"></script>
+  <script src="<?php echo BASE_URL . "js/Slides-SlidesJS-3/source/jquery.slides.min.js"; ?>"></script>
+  <script src="<?php echo BASE_URL . "js/script.js"; ?>"></script>
+
+  </script>
+
 </head>
 
 <body>
@@ -67,24 +78,24 @@ if ($user_id) {
               <i class='bi bi-person-fill'></i>
               </a>
               <ul class='dropdown-menu' aria-labelledby='navbarDropdown'>
-                <li><a class='dropdown-item' href='" . BASE_URL . "index.php?page=my_profile'>My Profile</a></li>
+                <li><a class='dropdown-item' href='" . BASE_URL . "index.php?page=my_profile&module=pesanan&action=list'>My Profile</a></li>
                 <li><a class='dropdown-item' href='" . BASE_URL . "logout.php'>Logout</a></li>
               </ul>
               </li>
               </ul>";
         } else {
-          echo "<li class='nav-item'><a href='" . BASE_URL . "index.php?page=login'>Login</a></li>
-                  <li class='nav-item'><a href='" . BASE_URL . "index.php?page=register'>Register</a></li>";
+          echo "<li class='nav-item'><a href='" . BASE_URL . "login.html'>Login</a></li>
+                  <li class='nav-item'><a href='" . BASE_URL . "register.html'>Register</a></li>";
         }
         ?>
-        <a href="<?php echo BASE_URL . "index.php?page=keranjang"; ?>" id='button-keranjang'>
+        <a href="<?php echo BASE_URL . "keranjang.html"; ?>" id='button-keranjang'>
           <span><i class='bi bi-cart-fill'></i></span>
         </a>
 
         <?php
-        // if ($totalBarang != 0) {
-        // echo "<span class='total-barang'>$totalBarang</span>";
-        // }
+        if ($totalBarang != 0) {
+          echo "<span class='total-barang'>$totalBarang</span>";
+        }
         ?>
       </div>
     </div>
