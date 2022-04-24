@@ -10,10 +10,9 @@
     padding: 10px 50px;
 }
 
-.navbar-light .navbar-brand
+.navbar-light .navbar-brand img
 {
-    font-weight: 700;
-    font-size: 30px;
+    max-width: 60px;
 }
 
 .nav-item .nav-link 
