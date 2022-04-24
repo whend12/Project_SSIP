@@ -45,7 +45,7 @@ if ($user_id) {
   <!--navbar-->
   <nav class="navbar navbar-expand-lg navbar-light bg-color pb-3 ">
     <div class="container">
-      <a class="navbar-brand" href="<?php echo BASE_URL . "index.php"; ?> "><img src="image/logo.png"></a>
+      <a class="navbar-brand" href="<?php echo BASE_URL . "index.php"; ?> "><img src="image/logo.png">Pin Shop</a>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav m-auto mb-2 mb-lg-0">
           <!--<li class="nav-item">
