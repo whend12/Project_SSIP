@@ -16,6 +16,10 @@ body {
   background-color: #6c757d !important;
 }
 
+.navbar-brand img {
+  max-width: 60px;
+}
+
 .nav-item a {
   text-decoration: none;
   color: black;
