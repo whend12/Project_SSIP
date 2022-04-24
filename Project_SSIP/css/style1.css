@@ -15,7 +15,9 @@ body {
 .bg-light {
   background-color: #6c757d !important;
 }
-
+.navbar-brand {
+  font-size: 24px;
+}
 .navbar-brand img {
   max-width: 60px;
 }
