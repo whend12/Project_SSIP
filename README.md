@@ -21,8 +21,7 @@ Tolong bikinin function dong buat manggil header dan footer nya
 -upload folder Project_SSIP
 sudah buat index,main,dan lainnya
 progres sudah sampai buat modul kategori dan barang 
-minta tolong dimas dan wendy membuat module user dan kota tinggal copas dari module yang udah ada
-untuk username dan passwordnya
+
 - admin@ssip.com
 - super
 
